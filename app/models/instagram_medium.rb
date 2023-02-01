@@ -1,0 +1,2 @@
+class InstagramMedium < ApplicationRecord
+end
