@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: dashboard_api_production
-  username: dashboard_api
+  database: dashboard-api
+  username: dashboard-api
   password: <%= ENV["DASHBOARD_API_DATABASE_PASSWORD"] %>
