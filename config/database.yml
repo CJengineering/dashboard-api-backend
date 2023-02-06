@@ -22,8 +22,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  <<: *default
-  database: dashboard_api_development
+  url: postgres://0.0.0.0:5432/{inserer le nom de ta base de db locale}
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -81,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: dashboard-api
-  username: dashboard-api
+  database: dashboard_api_production
+  username: dashboard_api
   password: <%= ENV["DASHBOARD_API_DATABASE_PASSWORD"] %>
